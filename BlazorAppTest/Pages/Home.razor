@@ -1,0 +1,19 @@
+﻿@page "/"
+
+<SearchBarComponent OnClickCallback="OnClickCallback" />
+
+@if(_player is not null)
+{
+    <DetailComponent Player="@_player" />
+    <PieChartComponent Score="@_player.Score" />
+}
+
+@code
+{
+    private Player? _player;
+
+    private void OnClickCallback(Player player)
+    {
+        _player = player;
+    }
+}

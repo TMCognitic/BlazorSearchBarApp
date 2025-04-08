@@ -1,0 +1,13 @@
+﻿
+<div style="border:solid black 1px;">
+    <h3>PieChartComponent</h3>
+
+    <Progress Class="mb-3">
+        <ProgressBar Width="@(Score * 5)" Label="@Score.ToString()" />
+    </Progress>
+</div>
+
+@code {
+    [Parameter]
+    public int Score { get; set; }
+}

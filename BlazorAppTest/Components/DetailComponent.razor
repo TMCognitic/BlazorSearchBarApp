@@ -1,0 +1,17 @@
+﻿<div style="border:solid black 1px;">
+    <h3>Detail Component</h3>
+
+    @if(Player is not null)
+    {        
+        <p>@Player.Id : @Player.Prenom</p>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public Player? Player 
+    {
+        get;
+        set;
+    }
+}
